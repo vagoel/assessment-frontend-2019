@@ -1,7 +1,7 @@
 import React from 'react'
-import { Incident } from '../components/Incident'
+import { Incident } from '../components/Incident';
 
-export function Home() {
+export function Home(props) {
   return (
     <div>
       <Incident
