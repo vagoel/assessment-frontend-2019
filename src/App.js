@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { CreateIncident } from './pages/CreateIncident'
 import { Home } from './pages/Home'
 import { Header } from './components/Header'
+import { createStore } from './lib/myRedux'
+import incidentReducer from './reducers/incidentReducer';
+
+const myStore = createStore(incidentReducer);
 
 function App() {
   return (
@@ -10,8 +14,8 @@ function App() {
       <div className="App">
         <Header />
         <div>
-          <Route exact path="/" component={Home} />
-          <Route path="/create" component={CreateIncident} />
+          <Route exact path="/" render={(routeProps) => (<Home {...routeProps} store={myStore}></Home>)} />
+          <Route path="/create" render={(routeProps) => (<CreateIncident {...routeProps} store={myStore.getState().length}></CreateIncident>)} />
         </div>
       </div>
     </Router>
