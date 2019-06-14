@@ -4,7 +4,7 @@ import { Incident } from '../components/Incident';
 export class Home extends Component {
   constructor(props) {
     super(props);
-    this.props.store.subscribe(this.render);
+    this.props.store.subscribe(this.render.bind(this));
   }
 
   render() {
@@ -14,6 +14,7 @@ export class Home extends Component {
         title={incident.name}
         assignee={incident.assignee}
         status={incident.status}
+        key={incident.id}
       />)
     });
 

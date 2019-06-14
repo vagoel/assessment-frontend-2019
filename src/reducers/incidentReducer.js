@@ -5,7 +5,8 @@ const incidentReducer = (state = [], action) => {
             return [...state, {
                 name: action.name,
                 assignee: action.assignee,
-                status: action.status
+                status: action.status,
+                id: Date.now()
             }];
         default:
             return state;
