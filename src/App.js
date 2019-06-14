@@ -15,7 +15,7 @@ function App() {
         <Header />
         <div>
           <Route exact path="/" render={(routeProps) => (<Home {...routeProps} store={myStore}></Home>)} />
-          <Route path="/create" render={(routeProps) => (<CreateIncident {...routeProps} store={myStore.getState().length}></CreateIncident>)} />
+          <Route path="/create" render={(routeProps) => (<CreateIncident {...routeProps} store={myStore}></CreateIncident>)} />
         </div>
       </div>
     </Router>
