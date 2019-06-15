@@ -1,3 +1,6 @@
+# Please note that given the time contriants (4hrs) , I could not spend time styling the app.
+
+
 # Slate Frontend Test Assignment
 
 You should spend no more than **4 hours** on this test assignment.
