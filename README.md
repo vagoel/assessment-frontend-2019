@@ -1,4 +1,4 @@
-# Please note that given the time contriants (4hrs) , I could not spend time styling the app.
+# Please note that given the time constraints (4hrs) , I could not spend time on styling the app.
 
 
 # Slate Frontend Test Assignment
